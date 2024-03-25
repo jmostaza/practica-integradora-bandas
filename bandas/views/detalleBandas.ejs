@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <% if (listado !=null) { %>
+            <h1>Detalle de la banda : <%= listado.nombre%>
+            </h1>
+            <ul>
+                <li>Integrantes: <%= listado.integrantes %>
+                </li>
+                <li> <a href="/bandas/genero/<%= listado.genero.toLowerCase() %>">Genero: <%= listado.genero %></a>
+                </li>
+                <li>Top Canciones: <%= listado.topCanciones %>
+                </li>
+                <li>id: <%= listado.id %>
+                </li>
+                <img src="/<%= listado.cover %>" %>" width="300" >
+            </ul>
+
+            <% } else{ %>
+                <h1>No se encontraron bandas del genero solicitado</h1>
+                <% } %>
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <% if (listado.length==0) { %>
+                <h1>No se encontraron bandas del genero solicitado</h1>
+                <% } else{ %>
+                    <h1>Detalle genero</h1>
+                    <% for( let i=0; i < listado.length; i++ ) { %>
+                        <ul <h2><a href="/bandas/id/<%=listado[i].id%>">Nombre: <%=listado[i].nombre %></a></h2>
+                            <li>Integrantes : <%=listado[i].integrantes%>
+                            </li>
+                            <li>Género : <%=listado[i].genero%>
+                            </li>
+                            <li>Top Canciones : <%=listado[i].topCanciones%>
+                            </li>
+                            <li>ID : <%=listado[i].id%>
+                            </li>
+                            <img src="/<%=listado[i].cover %>" alt="Imagen de la banda">
+                        </ul>
+                        <% } %>
+                            <% } %>
+
+        </section>
+    </main>
+</body>
+
+</html>

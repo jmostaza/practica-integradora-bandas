@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <ul>
+                <% for (let i=0; i < listado.length; i++) { %>
+                    <!-- listado fue "creado" en bandasController cuando pusimos el segundo parametro del render. -->
+                    <div>
+                        <li> <a href="/bandas/id/<%= listado[i].id %>">Nombre: <%= listado[i].nombre %></a></li>
+                        <img src="/<%= listado[i].cover %>" alt="Imagen de la pelicula" width="300px">
+                    </div>
+
+                    <%} %>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
